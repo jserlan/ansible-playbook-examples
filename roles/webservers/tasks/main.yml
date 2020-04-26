@@ -1,0 +1,14 @@
+---
+- name: "Installing Apache HTTPd"
+  apt:
+    name: "{{ packages['apache_common'] }}"
+    state: present
+
+- name: "Enabling Apache's SSL module"
+  apache2_module:
+    state: present
+    name: ssl
+  notify:  "Restart apache2"
+
+- import_tasks: apache-module-security-install.yml
+- import_tasks: apache-module-status-enable.yml

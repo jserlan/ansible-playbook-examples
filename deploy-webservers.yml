@@ -1,0 +1,12 @@
+---
+- name: "Deploying Webservers"
+  hosts: webservers
+  remote_user: root
+  roles:
+    - role: common
+    - role: webservers
+    - role: ufw
+      vars:
+        public_ports:
+        - '80'
+        - '443'

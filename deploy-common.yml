@@ -1,0 +1,7 @@
+---
+- name: "Deploying common configuration on all servers"
+  hosts: all
+  remote_user: root
+  roles:
+    - role: common
+    - role: ufw

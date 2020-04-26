@@ -1,0 +1,6 @@
+---
+- name: "Enabling Apache's Status module"
+  apache2_module:
+    name: status
+    state: present
+  notify: "Restart apache2"

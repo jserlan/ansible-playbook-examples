@@ -1,0 +1,49 @@
+---
+locale: fr_FR.UTF-8
+timezone: Europe/Paris
+packages:
+  monitoring_tools:
+  - htop
+  - iftop
+  - iotop
+  - dstat
+  - nethogs
+  - procps
+  - logtop
+  - ncdu
+  - apachetop
+  - dnstop
+  - nmon
+  admin_tools:
+  - wget
+  - curl
+  - dnsutils
+  - coreutils
+  - mailutils
+  - net-tools
+  - smartmontools
+  - logrotate
+  - file
+  - bash-completion
+  - man-db
+  - tcputils
+  - nmap
+  - zip
+  - unzip
+  - gzip
+  - pigz
+  - lzip
+  - plzip
+  - bzip2
+  - pbzip2
+  - tree
+  - pv
+  - util-linux
+  utils:
+  - html2text
+  - xmlstarlet
+  - apt-file
+  - debconf
+  - debconf-utils
+  - locales
+  - tzdata

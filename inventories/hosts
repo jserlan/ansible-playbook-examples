@@ -1,0 +1,3 @@
+[webservers]
+front[1:4].serlan.eu
+lb.serlan.eu

@@ -1,0 +1,6 @@
+---
+- name: "Installing PHP7"
+  apt:
+    name: "{{ packages['php_common'] }}"
+    state: present
+  notify: "Restart apache2"

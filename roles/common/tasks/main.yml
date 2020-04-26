@@ -1,0 +1,34 @@
+---
+- name: "Installing monitoring tools"
+  apt:
+    name: "{{ packages['monitoring_tools'] }}"
+    state: present
+
+- name: "Installing admin tools"
+  apt:
+    name: "{{ packages['admin_tools'] }}"
+    state: present
+
+- name: "Installing utils packages"
+  apt:
+    name: "{{ packages['utils'] }}"
+    state: present
+
+- name: "Setting the timezone"
+  timezone:
+    name: "{{ timezone }}"
+
+- name: "Setting locales to be generated"
+  debconf:
+    name: locales
+    question: locales/locales_to_be_generated
+    value: en_US.UTF-8 UTF-8, fr_FR.UTF-8 UTF-8
+    vtype: multiselect
+
+- name: "Setting the default locale"
+  debconf:
+    name: locales
+    question: locales/default_environment_locale
+    value: "{{ locale }}"
+    vtype: select
+  notify: "Rebuilding locales database"

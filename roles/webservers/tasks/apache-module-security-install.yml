@@ -1,0 +1,6 @@
+---
+- name: "Installing Modsecurity"
+  apt:
+    name: libapache2-modsecurity
+    state: present
+  notify: "Restart apache2"

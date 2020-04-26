@@ -1,0 +1,15 @@
+---
+packages:
+  apache_common:
+  - apache2
+  - apache2-utils
+  - apache2-doc
+  - apachetop
+  php_common:
+  - php
+  - php-curl
+  - php-gd
+  - php-mbstring
+  - php-mysql
+  - php-xml
+  - php-zip
