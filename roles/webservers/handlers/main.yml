@@ -8,3 +8,18 @@
   systemd:
     name: apache2
     state: reloaded
+
+- name: "Reload apache2 with syntax check"
+  command: apache2ctl configtest
+  register: apache_configtest
+  ignore_errors: yes
+  failed_when: apache_configtest.rc != 0
+  notify: "Reload apache2"
+
+- name: "Restart apache2 with syntax check"
+  command: apache2ctl configtest
+  register: apache_configtest
+  ignore_errors: yes
+  failed_when: apache_configtest.rc != 0
+  notify: "Restart apache2"
+
