@@ -1,5 +1,5 @@
-ansible-examples
-================
+ansible-playbook-examples
+=========================
 
 Here are some examples of ansible playbooks that I use for my personnal projects
 
